@@ -6,6 +6,7 @@
       :clipped="clipped"
       fixed
       app
+      color="transparent"
     >
       <v-list>
         <v-list-item
@@ -26,6 +27,7 @@
       fixed
       app
     >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title v-text="title" />
       <v-spacer />
     </v-app-bar>
@@ -35,7 +37,7 @@
       </v-container>
     </v-main>
     <v-footer
-      :absolute="!fixed"
+      :absolute="fixed"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
@@ -53,14 +55,16 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
           title: 'Welcome',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
           title: 'Binary-to-Decimal Converter',
           to: '/b2dec'
+        },
+        {
+          title: 'Border',
+          to: '/border-radius-previewer'
         }
       ],
       miniVariant: false,

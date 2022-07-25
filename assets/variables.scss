@@ -2,3 +2,20 @@
 //
 // The variables you want to modify
 // $font-size-root: 20px;
+@mixin borderRadius($border) {
+    border-radius: $border;
+}
+@mixin borderTopLeftRadius($border) {
+    border-top-left-radius: $border;
+}
+@mixin borderTopRightRadius($border) {
+    border-top-right-radius: $border;
+}
+@mixin borderBottomLeftRadius($border) {
+    border-bottom-left-radius: $border;
+}
+@mixin borderBottomRightRadius($border) {
+    border-bottom-right-radius: $border;
+}
+
+
